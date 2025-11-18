@@ -5,25 +5,18 @@ from clases import *
 from variables import *
 
 
-
-
-
-# Main 
-
-#turno = "jugador"
-
 print("Hola, va a comenzar el juego hundir la flota.")
 print(" ")
-print("Derrota a la maquina hundiendo todos sus barcos,\nla maquina y tu teneis 20 vidas cada uno, \n si se acierta se vuelve a disparar")
+print("Derrota a la máquina hundiendo todos sus barcos,\nla máquina y tu teneis 20 vidas cada uno, \n si se acierta se vuelve a disparar.")
 print(" ")
 print("Tablero jugador:\n ", tablero_jugador.tablero)
 
-while tablero_jugador.vidas > 0 and tablero_maquina.vidas > 0:
+while tablero_jugador.vidas > 0 and tablero_maquina.vidas > 0: #utilizamos while para que se siga ejecutando el juego hasta q uno llegue a 0
 
     if turno == "jugador":
-        print("\n>>> TURNO DEL JUGADOR <<<\n")
+        print("\n--- TURNO DEL JUGADOR --- \n")
 
-        # Mientras acierte, sigue
+        # si acierta, sigue
         while tablero_jugador.recibir_disparo(tablero_maquina):
             print("\n¡Has acertado! Puedes volver a disparar.\n")
 
@@ -31,7 +24,7 @@ while tablero_jugador.vidas > 0 and tablero_maquina.vidas > 0:
         turno = "maquina"
 
     else:
-        print("\n>>> TURNO DE LA MÁQUINA <<<\n")
+        print("\n --- TURNO DE LA MÁQUINA --- \n")
 
         while tablero_maquina.recibir_disparos_maquina(tablero_jugador):
             print("\nLa máquina acertó y vuelve a disparar...\n")
@@ -41,7 +34,7 @@ while tablero_jugador.vidas > 0 and tablero_maquina.vidas > 0:
 
 
 # FIN DE PARTIDA
-print("\n=== FIN DEL JUEGO ===")
+print("\n --- FIN DEL JUEGO --- ")
 
 if tablero_jugador.vidas <= 0:
     print("\n La máquina ganó.")

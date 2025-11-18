@@ -133,7 +133,7 @@ for nombre, tamaño in lista_barcos.items():
     barco = Barco(nombre, tamaño, "jugador")
     barco.crea_barco_aleatorio(tablero_jugador)
     crear_barco_jugador = tablero_jugador.tablero
-#print("Tablero jugador:\n ", tablero_jugador.tablero)
+
 
 for nombre, tamaño in lista_barcos.items():
     barco = Barco(nombre, tamaño, "maquina")
